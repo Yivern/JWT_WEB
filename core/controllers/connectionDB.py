@@ -4,7 +4,7 @@ from pymongo.server_api import ServerApi
 def connectDB():
     #Conexion a MongoDB
     #URL para conectar con Mongo
-    uri = "mongodb+srv://JesusAngarita:Jesus780228@proyectoreact.vetue4i.mongodb.net/?retryWrites=true&w=majority&appName=proyectoReact"
+    uri = "mongodb+srv://.mongodb.net/"
 
     # Crear un cliente para conectar 
     client = MongoClient(uri, server_api=ServerApi('1'))
