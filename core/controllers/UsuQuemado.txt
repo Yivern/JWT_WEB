@@ -1,0 +1,26 @@
+# Nos conectamos con la base de datos que queremos de nuestro cliente
+mydb = client["tablaReact"]
+
+# Nos conectamos a la tabla que queremos del cliente
+# mycol = mydb["usuario"]
+
+# Mongo maneja JSON, entonces guardamos un usuario quemado
+usuario = {
+    "_id": 1,
+    "usuario": "Jesus",
+    "contraseña": "hola12345"
+}
+
+# # Aca lo insertamos
+x = mycol.insert_one(usuario)
+
+mycol = mydb["configuracion"]
+
+# _id para reemplazar el id que ponen por defecto
+tiempoExp = {
+    "_id": 1,
+    "descripcion": "Tiempo de expiracion del JWT",
+    "confExp": 900
+}
+
+x = mycol.insert_one(tiempoExp)
